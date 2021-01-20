@@ -56,7 +56,7 @@ int main()
 			if (x == NULL)
 				printf("Element ne postoji\n");
 			else
-				printf("Element %d je pronaen\n", x->el);
+				printf("Element %d je prona√∞en\n", x->el);
 			break;
 		case 4:
 			printf("\nOdaberite element koji zelite izbrisati: \n");
@@ -69,7 +69,7 @@ int main()
 			printf("\nKraj!!\n");
 			break;
 		default:
-			printf("\nPogreöan unos, pokuöajte ponovno!\n");
+			printf("\nPogre≈°an unos, poku≈°ajte ponovno!\n");
 
 		}
 
