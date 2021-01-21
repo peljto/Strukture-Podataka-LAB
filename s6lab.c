@@ -30,7 +30,9 @@ void IspisR(Red);
 int main()
 {
 	struct lista head;
-	head.next = NULL;
+	struct Cvor head1;
+	head1.Next = NULL;
+	head.Next = NULL;
 	int i, s, r, stog, red;
 	
 	printf("\r Koliko ce brojeva sadrzavati stog?");
@@ -46,7 +48,7 @@ int main()
 	
 	for(i = 0; i < r; i++) {
 		red = rand() % 100 +10;
-		StaviURed(r, &head);
+		StaviURed(r, &head1);
 	}
 	
 	printf("Stog: ");
@@ -56,10 +58,10 @@ int main()
 	IspisS(head.Next);
 	
 	printf("\r\nRed: ");
-	IspisR(head.Next);
+	IspisR(head1.Next);
 	printf("\r\nRed (nakon skidanja elementa iz reda): ");
-	SkiniIzReda(head.Next);
-	IspisR(head.next);
+	SkiniIzReda(head1.Next);
+	IspisR(head1.Next);
 	
 	return 1;
 }
@@ -98,7 +100,7 @@ void StaviURed(int x, Red R) {
 
 	Red q;
 	q = (Red)malloc(sizeof(struct Cvor));
-	q->El = El;
+	q->El = x;
 	while(R->Next != NULL){
 		R = R->next;
 	}
